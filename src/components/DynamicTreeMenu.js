@@ -71,6 +71,28 @@ const DynamicTreeMenu = () => {
             <Tree tree={dynamicTree} onClick={handleItemClick} />
           </TreeView>
         </Col>
+        <Col lg={6} className="bg-info">
+          <div className="right-area">
+            {clickedItemLabel && (
+              <Fragment>
+                <h3>{clickedItemLabel}</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                  at erat a nisl molestie ornare. Donec lacinia neque non ex
+                  lacinia, eget suscipit justo pharetra. Vestibulum vitae porta
+                  nisi, sit amet rutrum libero. Pellentesque a arcu massa. Morbi
+                  id metus in magna aliquet fermentum eu non purus. Mauris
+                  ultrices augue sit amet mi ultrices lobortis. Etiam ac felis
+                  ipsum. Sed at ligula vestibulum, porta odio quis, eleifend
+                  sapien. Curabitur vehicula rhoncus odio placerat pretium. In
+                  ultricies, quam non viverra gravida, elit neque convallis
+                  purus, in porttitor ipsum velit quis est. Sed venenatis felis
+                  nisl, eu laoreet quam commodo id. Praesent.
+                </p>
+              </Fragment>
+            )}
+          </div>
+        </Col>
       </Row>
       <Row>
         <Col lg={12} className="bg-danger">
