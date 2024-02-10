@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import "./dynamictreemenu.css";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -51,6 +51,10 @@ const dynamicTree = {
 };
 
 const DynamicTreeMenu = () => {
+  const [clickedItemLabel, setClickedItemLabel] = useState("");
+  const handleItemClick = (label) => {
+    setClickedItemLabel(label);
+  };
   return (
     <Fragment>
       <Row>
@@ -64,23 +68,29 @@ const DynamicTreeMenu = () => {
               overflowY: "auto",
             }}
           >
-            <Tree tree={dynamicTree} />
+            <Tree tree={dynamicTree} onClick={handleItemClick} />
           </TreeView>
+        </Col>
+      </Row>
+      <Row>
+        <Col lg={12} className="bg-danger">
+          {clickedItemLabel && <p>You are viewing: {clickedItemLabel}</p>}
         </Col>
       </Row>
     </Fragment>
   );
 };
 
-function Tree({ tree }) {
+function Tree({ tree, onClick }) {
   return (
     <TreeItem
       nodeId={tree.nodeId}
       label={tree.label}
       endIcon={tree.children.length === 0 ? <AdjustIcon /> : null}
+      onClick={() => onClick(tree.label)}
     >
       {tree.children.map((childTree) => (
-        <Tree key={tree.nodeId} tree={childTree} />
+        <Tree key={tree.nodeId} tree={childTree} onClick={onClick} />
       ))}
     </TreeItem>
   );
