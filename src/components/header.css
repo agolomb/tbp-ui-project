@@ -1,0 +1,12 @@
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #10078f;
+  color: white;
+}
+
+.headerText {
+  font-size: 24px;
+}
