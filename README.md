@@ -27,7 +27,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-To view the deployed website via Vercel please visit the website [here](https://tbpagolomb.netlify.app/).
+To view the deployed website via Netlify please visit the website [here](https://tbpagolomb.netlify.app/).
 
 You can also paste https://tbpagolomb.netlify.app/ into your browser address bar and press enter. 
 
