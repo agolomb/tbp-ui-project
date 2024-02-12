@@ -31,6 +31,3 @@ To view the deployed website via Netlify please visit the website [here](https:/
 
 You can also paste https://tbpagolomb.netlify.app/ into your browser address bar and press enter. 
 
-Registration, Log In, and Forgot Your Password sections:
-
-These sections are placeholders that you can interact with. They feature toasters and data validation to enhance the user experience.
